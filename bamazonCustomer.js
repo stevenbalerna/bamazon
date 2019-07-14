@@ -55,15 +55,16 @@ function purchasePrompt() {
 };
 
 function purchaseOrder(id, amtBought) {
-    connection.query('Select * FROM products WHERE item_id = ' + id, function (err, res) {
-        if (err) {
-            console.log(err)
-        };
-        if (amtBought <= res[0].stock_quantity) {
-            var totalCost = res[0].price * amtBought;
-            console.log("Good news! Your purchase has been completed!");
-            console.log("Your total cost for " + amtBought + " " + res[0].product_name + " is " + totalCost + " Thank you!");
-            connection.query("UPDATE Products SET stock_quantity = stock_quantity - " + amtBought + "WHERE item_id = " + id);
+        connection.query('Select * FROM products WHERE item_id = ' + id, function (err, res) {
+            if (err) {
+                console.log(err)
+            };
+            if (amtBought <= res[0].stock_quantity) {
+                var totalCost = res[0].price * amtBought;
+                connection.query("UPDATE Products SET stock_quantity = stock_quantity - " + amtBought + "WHERE item_id = " + id);
+                console.log("Good news! Your purchase has been completed!");
+                console.log("Your total cost for " + amtBought + " " + res[0].product_name + " is " + totalCost + " Thank you!");
+               
         } else {
             console.log("Insufficient quantity, sorry we do not have enough " + res[0].product_name + "to complete your order.");
         };
