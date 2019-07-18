@@ -22,9 +22,9 @@ VALUES
     (333, "Baseball Cap", "sports apparel", 25.99, 56),
     (456, "Apple Watch", "electronics", 199.99, 38),
     (578, "Batman Comic Book #1,000", "books", 3.99, 43),
-    (609, "J.Cole - KOD Album", "music", 9.99, 99),
+    (609, "J.Cole - KOD Album", "music", 9.99, 95),
     (747, "12-Pack of Mountain Dew", "drinks", 4.99, 87),
-    (824, "Nike Basketball Shoes", "sports apparel", 99.99, 24),
+    (824, "Nike Basketball Shoes", "sports apparel", 99.99, 33),
     (987, "Smartfood Popcorn", "foods", 3.99, 88),
     (1234, "Old School DVD", "entertainment", 19.99, 69);
     
